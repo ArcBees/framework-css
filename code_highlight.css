@@ -1,0 +1,11 @@
+code .class {
+    color: red;
+}
+
+code .tag {
+    color: blue;
+}
+
+code .attribute {
+    color: green;
+}

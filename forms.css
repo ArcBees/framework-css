@@ -1,0 +1,318 @@
+/* -- Form
+------------------------ */
+label,
+input {
+    display: inline-block;
+}
+
+textarea,
+input,
+select {
+    color: #3f3f3f;
+
+    padding: 5px;
+    border: 1px solid #cccccc;
+
+    vertical-align: middle;
+
+    border-radius: 0;
+    outline: none;
+}
+
+select {
+    color: #afafaf;
+    background-color: #fff;
+
+    height: 24px;
+}
+
+/* input with error */
+.input_error {
+    background-color: #ffcccc;
+
+    border-color: #cc6666;
+}
+
+.input_error::-webkit-input-placeholder {
+    color: red;
+}
+
+.input_error::-moz-placeholder {
+    color: red;
+}
+
+.input_error:-ms-input-placeholder {
+    color: red;
+}
+
+/* input with an icon */
+.input_icon {
+    display: inline-block;
+    max-width: 100%;
+
+    position: relative;
+}
+
+.input_icon__icon {
+    font-size: 1.5rem;
+
+    margin-top: -7px;
+
+    top: 50%;
+    left: 5px;
+    position: absolute;
+}
+
+.input_icon input:first-child:not(:last-child) {
+    text-indent: 0;
+}
+
+.input_icon .input_icon__icon:not(:first-child) {
+    right: 5px;
+    left: auto;
+}
+
+.input_icon input {
+    text-indent: 15px;
+
+    padding: 5px;
+}
+
+.input_required {
+    display: inline-block;
+    position: relative;
+}
+
+.input_required__required:after {
+    color: red;
+    font-size: 16px;
+
+    content: "*";
+    position: absolute;
+    top: -1px;
+    right: 2px;
+}
+
+.input_labeled {
+    display: table;
+    position: relative;
+}
+
+.input_labeled > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.input_labeled__label {
+    background: #ccc;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+
+    padding: 0 5px;
+
+    cursor: pointer;
+
+    /* ce qui suit est pour overwriter les style par default des "button" */
+    border: none;
+    height: 100%;
+}
+
+.input_labeled__label + input {
+    text-indent: 0;
+}
+
+.input_labeled__label + input {
+    text-indent: 0;
+}
+
+.input_labeled__label:hover {
+    background: #999;
+}
+
+i.input_labeled__label {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+/* il y a deux type de form inline qu'on pourrait avoir,
+   1 - display inline-block où l'on va devoir ajouter une width au label et à l'input
+   2 - display table et table-cell où seulement un width au label serait nécessaire
+       et le input prendra 100% de ce qui reste donc pour des fields où les labels pourraient avoir différentes width
+       les inputs qui suivent les labels finiraient tous au même endroit sans avoir besoin de leur donner une width
+       à chacun.  */
+
+.field {
+    margin: 10px 0;
+}
+
+.field label,
+.field input {
+    display: block;
+}
+
+label.required:after {
+    content: "*";
+    color: red;
+    font-size: 16px;
+    line-height: 1;
+
+    display: inline-block;
+    margin-top: -1rem;
+}
+
+/* FORM INLINE
+  Les fields sont en inline-block toutefois nous devons ajouter une width à chacun des labels et des inputs
+  pour s'assurer d'un affichage qui fait du sens, peut être utilisé avec la grid
+*/
+
+.inline_fields .field > * {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+/* here you fix the width of the labels */
+.inline_fields .field label {
+    width: 150px;
+}
+
+.inline_fields .field label.name {
+    width: 50px;
+}
+
+.inline_fields input,
+.inline_fields select,
+.inline_fields textarea {
+    max-width: 100%;
+}
+
+/* FORM INLINE EVEN
+  Tous les fields vont avoir la même largeur,
+  il ne suffit qu'à donner une width aux labels et l'input qui suit va prendre la largeur restante.
+  Toutefois nous devons mettre l'input à l'intérieur d'une div pour que ça fonctionne dans les vieilles versions de ie
+*/
+.inline_fields_even .field {
+    display: table;
+    width: 100%;
+}
+
+.inline_fields_even .field > * {
+    display: table-cell;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+.inline_fields_even .field > *:first-child {
+    padding-left: 0;
+}
+
+.inline_fields_even .field > *:last-child {
+    padding-right: 0;
+}
+
+/* here you fix the width of the labels */
+.inline_fields_even .field label {
+    width: 80px;
+}
+
+.inline_fields_even input,
+.inline_fields_even .input,
+.inline_fields_even select,
+.inline_fields_even textarea {
+    width: 100%;
+}
+
+/* Radio/Checkbox Btns */
+input[type=radio],
+input[type=checkbox] {
+    display: none;
+}
+
+.input_radio,
+.input_checkbox {
+    display: inline-block;
+}
+
+.input_radio label,
+.input_checkbox label {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    display: inline-block;
+    padding-left: 25px;
+    margin: 0 15px 10px 0;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.input_radio label:before,
+.input_checkbox label:before {
+    background-color: #fff;
+    content: "";
+    font-size: 0;
+
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    border: 1px solid #cccccc;
+
+    position: absolute;
+    left: 0;
+    top: 0px;
+
+    border-radius: 8px;
+}
+
+/* Radio Btns */
+.input_radio label:before {
+    color: #3f3f3f;
+    content: "\2022";
+    font-size: 0px;
+    text-align: center;
+    line-height: 12px;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type=radio]:checked + label:before {
+    font-size: 33px;
+
+    border-color: #3f3f3f;
+}
+
+/* Checkbox Btns */
+.input_checkbox label:before {
+    border-radius: 0px;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "";
+    font-size: 15px;
+    color: #3f3f3f;
+    text-align: center;
+    line-height: 15px;
+
+    width: 10px;
+    height: 8px;
+
+    border-left: 2px solid #3f3f3f;
+    border-bottom: 4px solid #3f3f3f;
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0, 0);
+
+    -webkit-transform: rotate(-45deg) scaleY(0.5);
+    -moz-transform: rotate(-45deg) scaleY(0.5);
+    -ms-transform: rotate(-45deg) scaleY(0.5);
+    -o-transform: rotate(-45deg) scaleY(0.5);
+    transform: rotate(-45deg) scaleY(0.5);
+}

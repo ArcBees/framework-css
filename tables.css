@@ -1,0 +1,137 @@
+/* -- Tables
+------------------------ */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+}
+
+table th {
+    cursor: auto;
+    background: #eeeeee;
+    padding: .5em 1em;
+    vertical-align: middle;
+}
+
+table td {
+    border-top: 1px solid #d0d0d0;
+    padding: .5em 1em;
+    vertical-align: middle;
+}
+
+table td:first-child,
+table th:first-child,
+table.table_bordered td:first-child,
+table.table_bordered th:first-child,
+table.table_column td:first-child,
+table.table_column th:first-child{
+    border-left: none;
+}
+
+/* Sqeezed */
+table.table_sqeezed {
+    width: auto;
+}
+
+/* Column */
+table.table_column {
+    border: 1px solid #d0d0d0;
+}
+
+table.table_column td,
+table.table_column th {
+    border-left: 1px solid #d0d0d0;
+    border-top: none;
+}
+
+/* Bordered */
+table.table_bordered {
+    border: 1px solid #d0d0d0;
+}
+
+table.table_bordered td,
+table.table_bordered th {
+    border-left: 1px solid #d0d0d0;
+}
+
+/* Striped */
+table.table_striped tr:nth-child(odd) {
+    background-color:#fff;
+}
+
+table.table_striped tr:nth-child(even) {
+    background-color:#eee;
+}
+
+/* table hover */
+table.table_hover tr:hover {
+    background-color: #999;
+}
+
+/* table row variable */
+tr.table_row__error td {
+    background-color: #ffcccc;
+}
+
+tr.table_row__disabled td {
+    pointer-events: none;
+    opacity: .35;
+}
+
+/* Responsive */
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+ /*Force table to not be like tables anymore */
+.table_responsive,
+.table_responsive thead,
+.table_responsive tbody,
+.table_responsive th,
+.table_responsive td,
+.table_responsive tr {
+    display: block;
+}
+
+ /*Hide table headers (but not display: none;, for accessibility) */
+.table_responsive thead tr {
+display: none   ;
+}
+
+.table_responsive tr { border: 1px solid #999; }
+
+.table_responsive td {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: .5rem 0;
+}
+
+.table_responsive td > * {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.table_responsive td:before {
+    text-overflow: ellipsis;
+
+    display: inline-block;
+    width: 20%;
+    padding: 0 20px;
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    vertical-align: middle;
+}
+
+/*Label the data*/
+.table_responsive td:nth-of-type(1):before { content: "Time"; }
+.table_responsive td:nth-of-type(2):before { content: "Patient"; }
+.table_responsive td:nth-of-type(3):before { content: "Location"; }
+.table_responsive td:nth-of-type(4):before { content: "lonnngg Bitchessssss"; }
+.table_responsive td:nth-of-type(5):before { content: "Reason"; }
+.table_responsive td:nth-of-type(6):before { content: "Status"; }
+.table_responsive td:nth-of-type(7):before { content: "Room"; }
+}

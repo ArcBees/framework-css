@@ -1,0 +1,74 @@
+/* Menu hamburger */
+
+.toggle_nav_icon {
+    display: inline-block;
+    height: 1.3rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.toggle_nav_icon span,
+.toggle_nav_icon span:before,
+.toggle_nav_icon span:after {
+    display: block;
+    width: 2.5rem;
+    height: .3rem;
+    background-color: #222;
+    -webkit-transition-property: background-color, -webkit-transform;
+    transition-property: background-color, transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.toggle_nav_icon span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.toggle_nav_icon span:before,
+.toggle_nav_icon span:after {
+    position: absolute;
+    content: "";
+}
+
+.toggle_nav_icon span:before {
+    top: -.5rem;
+}
+
+.toggle_nav_icon span:after {
+    bottom: -.5rem;
+}
+
+/* changer pour active */
+.toggle_nav_icon:hover span {
+    background-color: transparent;
+}
+
+.toggle_nav_icon:hover span:before {
+    -webkit-transform: translateY(5px) rotate(45deg);
+    -ms-transform: translateY(5px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
+}
+
+.toggle_nav_icon:hover span:after {
+    -webkit-transform: translateY(-5px) rotate(-45deg);
+    -ms-transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Search expand */
+input.searchExpand[type=text] {
+    width: 6rem;
+    padding-right: 2rem;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input.searchExpand[type=text]:focus {
+    width: 14rem;
+}

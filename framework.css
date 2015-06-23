@@ -1,0 +1,274 @@
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+ul ul,
+ol ol {
+    margin-left: 2rem;
+}
+
+li p,
+li ul,
+li ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video {
+    max-width: 100%;
+}
+
+code {
+    /*background: #ececec;*/
+
+    /*display: block;*/
+    /*margin-bottom: 1rem;*/
+    /*padding: 2rem;*/
+    /*border: 1px solid #cccccc;*/
+}
+
+p,
+li,
+dl {
+    font-size: 1.4rem;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+hr {
+    display: block;
+    height: .1rem;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1rem 0 .5rem;
+    padding: 0;
+}
+
+/* Color used when selecting text */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/* -- Content
+------------------------ */
+.container {
+    display: table;
+    width: 100%;
+}
+
+aside.menu {
+    background-color: #333333;
+    display: table-cell;
+    vertical-align: top;
+    width: 50px;
+
+    -webkit-transition: all .3s;
+}
+
+aside.menu:hover {
+    width: 250px;
+}
+
+aside.menu:hover ~ .section.main {
+    width: calc(100% - 250px);
+}
+
+aside.menu nav {
+    color: #fff;
+
+    position: fixed;
+    margin: 20px;
+    margin-left: -200px;
+}
+
+aside.menu:hover nav {
+    margin-left: 20px;
+
+    -webkit-transition: all .3s;
+}
+
+section.main {
+    display: table;
+    min-height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 980px;
+    margin: 0 auto;
+}
+
+
+
+/* -- List
+------------------------ */
+
+dt {
+    font-weight: bold;
+    width: 10rem;
+    float: left;
+    clear: both;
+    overflow: hidden;
+}
+
+dd {
+    margin: 0 0 1rem 10rem;
+    padding: 0 0 1rem .5rem;
+}
+
+dl.vertical_list dt {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    float: none;
+}
+
+dl.vertical_list dd {
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid #cccccc;
+    padding: 0 0 1rem 0;
+}
+
+/* -- Row Display
+------------------------ */
+
+.row {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.row > *,
+.col {
+    display: table-cell;
+
+    vertical-align: top;
+}
+
+/* -- Table Display
+------------------------ */
+
+.tbl_group {
+	margin: 10px 0;
+}
+
+.tbl_group .tbl {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.tbl {
+	display: table;
+	width: 100%;
+	margin: 10px 0;
+}
+
+.tbl > * {
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+.tbl_dark > * {
+	background-color: #ccc;
+
+	padding: 4px 7px;
+}
+
+.tbl__separate {
+	margin-left: -2px; /* -- correspond to the width of the border-spacing -- */
+    width: calc(100% + 4px); /* -- the 4px equal the border-spacing x2 to fill the space at the beginning and at the end of the table  -- */
+
+    border-spacing: 2px 0; /* -- correspond to the number of pixel between each table-cell -- */
+	border-collapse: separate;
+}
+
+/* -- Pagination
+------------------------ */
+
+ul.pagination {
+    list-style: none;
+    text-align: center;
+}
+
+ul.pagination li {
+    display: inline;
+    margin: 0 2px;
+}
+
+ul.pagination a {
+    color: #c3c3c3;
+    text-decoration: none;
+}
+
+ul.pagination a:hover {
+    color: #3f3f3f;
+}
+
+ul.pagination li.pagination_first,
+ul.pagination li.pagination_last,
+ul.pagination li.pagination_previous,
+ul.pagination li.pagination_next {
+    text-decoration: none;
+}
+
+ul.pagination .pagination__active {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* -- Divers
+------------------------ */
+
+hr {
+    margin: 5rem 0;
+}

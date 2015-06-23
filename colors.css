@@ -1,0 +1,26 @@
+.color {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+.color_primary {
+    background-color: #ccc;
+}
+
+.color_secondary {
+    background-color: #999;
+}
+
+.color_tertiary {
+    background-color: #666;
+}
+
+.color_quaternary {
+    background-color: #333;
+}
+
+.color_quinary {
+    background-color: #000;
+}
