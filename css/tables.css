@@ -1,22 +1,38 @@
-/* -- Tables
+/**
+ * TABLES.CSS
+ * Tables application style
+ *
+ * - BASE                       Base style of a table
+ * - VARIANT                    Different style - squeezed, Column, Bordered, Striped,
+ * - STATE                      State of table - Hover, Error, Disabled
+ * - RESPONSIVE                 Responsive table
+ * - TABLE DIV                  Table made with DIVs
+ */
+
+/* -- BASE
 ------------------------ */
 table {
+    text-align: left;
+
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    text-align: left;
 }
 
 table th {
-    cursor: auto;
     background: #eeeeee;
+
     padding: .5em 1em;
+
     vertical-align: middle;
+
+    cursor: auto;
 }
 
 table td {
-    border-top: 1px solid #d0d0d0;
     padding: .5em 1em;
+    border-top: 1px solid #d0d0d0;
+
     vertical-align: middle;
 }
 
@@ -29,12 +45,17 @@ table.table_column th:first-child{
     border-left: none;
 }
 
-/* Sqeezed */
+/* -- VARIANT
+------------------------ */
+
+/* -- Sqeezed -- */
+
 table.table_sqeezed {
     width: auto;
 }
 
-/* Column */
+/* -- Column -- */
+
 table.table_column {
     border: 1px solid #d0d0d0;
 }
@@ -45,7 +66,8 @@ table.table_column th {
     border-top: none;
 }
 
-/* Bordered */
+/* -- Bordered -- */
+
 table.table_bordered {
     border: 1px solid #d0d0d0;
 }
@@ -55,7 +77,8 @@ table.table_bordered th {
     border-left: 1px solid #d0d0d0;
 }
 
-/* Striped */
+/* -- Striped -- */
+
 table.table_striped tr:nth-child(odd) {
     background-color:#fff;
 }
@@ -64,12 +87,15 @@ table.table_striped tr:nth-child(even) {
     background-color:#eee;
 }
 
-/* table hover */
+/* -- STATE
+------------------------ */
+
 table.table_hover tr:hover {
     background-color: #999;
 }
 
-/* table row variable */
+/* -- Table row variable -- */
+
 tr.table_row__error td {
     background-color: #ffcccc;
 }
@@ -79,59 +105,120 @@ tr.table_row__disabled td {
     opacity: .35;
 }
 
-/* Responsive */
-@media
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
+/* -- RESPONSIVE
+------------------------ */
 
- /*Force table to not be like tables anymore */
-.table_responsive,
-.table_responsive thead,
-.table_responsive tbody,
-.table_responsive th,
-.table_responsive td,
-.table_responsive tr {
-    display: block;
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not act like tables anymore */
+    .table_responsive,
+    .table_responsive thead,
+    .table_responsive tbody,
+    .table_responsive th,
+    .table_responsive td,
+    .table_responsive tr {
+        display: block;
+    }
+
+    .table_responsive thead tr {
+        display: none;
+    }
+
+    .table_responsive tr {
+        border: 1px solid #999;
+    }
+
+    .table_responsive td {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        padding: .5rem 0;
+    }
+
+    .table_responsive td > * {
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+
+    .table_responsive td:before {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        display: inline-block;
+        width: 20%;
+        padding: 0 20px;
+        overflow: hidden;
+
+
+        vertical-align: middle;
+    }
+
+    /* Label the data */
+    /*TODO voir avec Christopher pour gwtp*/
+    .table_responsive td:nth-of-type(1):before {
+        content: "Time";
+    }
+
+    .table_responsive td:nth-of-type(2):before {
+        content: "Patient";
+    }
+
+    .table_responsive td:nth-of-type(3):before {
+        content: "Location";
+    }
+
+    .table_responsive td:nth-of-type(4):before {
+        content: "lonnngg en salllleeeeee";
+    }
+
+    .table_responsive td:nth-of-type(5):before {
+        content: "Reason";
+    }
+
+    .table_responsive td:nth-of-type(6):before {
+        content: "Status";
+    }
+
+    .table_responsive td:nth-of-type(7):before {
+        content: "Room";
+    }
 }
 
- /*Hide table headers (but not display: none;, for accessibility) */
-.table_responsive thead tr {
-display: none   ;
+/* -- TABLE DISPLAY div
+------------------------ */
+
+.tbl_group {
+    margin: 10px 0;
 }
 
-.table_responsive tr { border: 1px solid #999; }
-
-.table_responsive td {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding: .5rem 0;
+.tbl_group .tbl {
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
-.table_responsive td > * {
-    display: inline-block;
+.tbl {
+    display: table;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.tbl > * {
+    display: table-cell;
 
     vertical-align: middle;
 }
 
-.table_responsive td:before {
-    text-overflow: ellipsis;
+.tbl_colored > * {
+    background-color: #ccc;
 
-    display: inline-block;
-    width: 20%;
-    padding: 0 20px;
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    vertical-align: middle;
+    padding: 4px 7px;
 }
 
-/*Label the data*/
-.table_responsive td:nth-of-type(1):before { content: "Time"; }
-.table_responsive td:nth-of-type(2):before { content: "Patient"; }
-.table_responsive td:nth-of-type(3):before { content: "Location"; }
-.table_responsive td:nth-of-type(4):before { content: "lonnngg Bitchessssss"; }
-.table_responsive td:nth-of-type(5):before { content: "Reason"; }
-.table_responsive td:nth-of-type(6):before { content: "Status"; }
-.table_responsive td:nth-of-type(7):before { content: "Room"; }
+.tbl_separate {
+    margin-left: -2px; /* -- correspond to the width of the border-spacing -- */
+    width: calc(100% + 4px); /* -- the 4px equal the border-spacing x2 to fill the space at the beginning and at the end of the table  -- */
+
+    border-spacing: 2px 0; /* -- correspond to the number of pixel between each table-cell -- */
+    border-collapse: separate;
 }

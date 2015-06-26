@@ -1,5 +1,20 @@
-/* -- FORM
+/**
+ * FORMS.CSS
+ * Forms application style
+ *
+ * - BASE                       Base style label, input, textarea, select
+ * - INPUT STATE                State of the input - Error, Required
+ * - INPUT WITH ICON            Input with icon - Error, Required
+ * - INPUT LABELED              Input labeled - "with button"
+ * - FORM                       Form style for field
+ * - FORM INLINE FIELDS         Form with inline fields
+ * - FORM INLINE EVEN FIELDS    Form with inline fields that takes full width of it's parent
+ * - RADIO - CHECKBOX           Style for radio button and checkbox
+ */
+
+/* -- BASE
 ------------------------ */
+
 label,
 input {
     display: inline-block;
@@ -26,7 +41,9 @@ select {
     height: 24px;
 }
 
-/* input with error */
+/* -- INPUT STATE
+------------------------ */
+
 .input_error {
     background-color: #ffcccc;
 
@@ -45,7 +62,25 @@ select {
     color: red;
 }
 
-/* input with an icon */
+.input_required {
+    display: inline-block;
+
+    position: relative;
+}
+
+.input_required__required:after {
+    content: "*";
+    color: red;
+    font-size: 16px;
+
+    position: absolute;
+    top: -1px;
+    right: 2px;
+}
+
+/* -- INPUT WITH ICON
+------------------------ */
+
 .input_icon {
     display: inline-block;
     max-width: 100%;
@@ -58,9 +93,9 @@ select {
 
     margin-top: -7px;
 
+    position: absolute;
     top: 50%;
     left: 5px;
-    position: absolute;
 }
 
 .input_icon input:first-child:not(:last-child) {
@@ -78,28 +113,18 @@ select {
     padding: 5px;
 }
 
-.input_required {
-    display: inline-block;
-    position: relative;
-}
-
-.input_required__required:after {
-    color: red;
-    font-size: 16px;
-
-    content: "*";
-    position: absolute;
-    top: -1px;
-    right: 2px;
-}
+/* -- INPUT LABELED
+------------------------ */
 
 .input_labeled {
     display: table;
+
     position: relative;
 }
 
 .input_labeled > * {
     display: table-cell;
+
     vertical-align: middle;
 }
 
@@ -109,13 +134,11 @@ select {
     text-decoration: none;
     text-align: center;
 
+    height: 100%;
     padding: 0 5px;
+    border: none;
 
     cursor: pointer;
-
-    /* ce qui suit est pour overwriter les style par default des "button" */
-    border: none;
-    height: 100%;
 }
 
 .input_labeled__label + input {
@@ -135,12 +158,8 @@ i.input_labeled__label {
     line-height: 1;
 }
 
-/* il y a deux type de form inline qu'on pourrait avoir,
-   1 - display inline-block où l'on va devoir ajouter une width au label et à l'input
-   2 - display table et table-cell où seulement un width au label serait nécessaire
-       et le input prendra 100% de ce qui reste donc pour des fields où les labels pourraient avoir différentes width
-       les inputs qui suivent les labels finiraient tous au même endroit sans avoir besoin de leur donner une width
-       à chacun.  */
+/* -- FORM
+------------------------ */
 
 .field {
     margin: 10px 0;
@@ -161,10 +180,8 @@ label.required:after {
     margin-top: -1rem;
 }
 
-/* FORM INLINE
-  Les fields sont en inline-block toutefois nous devons ajouter une width à chacun des labels et des inputs
-  pour s'assurer d'un affichage qui fait du sens, peut être utilisé avec la grid
-*/
+/* -- FORM INLINE FIELDS
+------------------------ */
 
 .inline_fields .field > * {
     display: inline-block;
@@ -172,9 +189,9 @@ label.required:after {
     vertical-align: middle;
 }
 
-/* here you fix the width of the labels */
+/* change the width of the labels */
 .inline_fields .field label {
-    width: 150px;
+    width: 75px;
 }
 
 .inline_fields .field label.name {
@@ -187,11 +204,9 @@ label.required:after {
     max-width: 100%;
 }
 
-/* FORM INLINE EVEN
-  Tous les fields vont avoir la même largeur,
-  il ne suffit qu'à donner une width aux labels et l'input qui suit va prendre la largeur restante.
-  Toutefois nous devons mettre l'input à l'intérieur d'une div pour que ça fonctionne dans les vieilles versions de ie
-*/
+/* -- FORM INLINE EVEN FIELDS
+------------------------ */
+
 .inline_fields_even .field {
     display: table;
     width: 100%;
@@ -200,6 +215,7 @@ label.required:after {
 .inline_fields_even .field > * {
     display: table-cell;
     padding: 0 5px;
+
     vertical-align: middle;
 }
 
@@ -223,7 +239,9 @@ label.required:after {
     width: 100%;
 }
 
-/* Radio/Checkbox Btns */
+/* -- RADIO - CHECKBOX
+------------------------ */
+
 input[type=radio],
 input[type=checkbox] {
     display: none;
@@ -250,8 +268,8 @@ input[type=checkbox] {
 
 .input_radio label:before,
 .input_checkbox label:before {
-    background-color: #fff;
     content: "";
+    background-color: #fff;
     font-size: 0;
 
     display: inline-block;
@@ -262,16 +280,15 @@ input[type=checkbox] {
 
     position: absolute;
     left: 0;
-    top: 0px;
+    top: 0;
 
     border-radius: 8px;
 }
 
-/* Radio Btns */
 .input_radio label:before {
     color: #3f3f3f;
     content: "\2022";
-    font-size: 0px;
+    font-size: 0;
     text-align: center;
     line-height: 12px;
 
@@ -286,9 +303,8 @@ input[type=radio]:checked + label:before {
     border-color: #3f3f3f;
 }
 
-/* Checkbox Btns */
 .input_checkbox label:before {
-    border-radius: 0px;
+    border-radius: 0;
 
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;

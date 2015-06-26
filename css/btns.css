@@ -1,4 +1,16 @@
-/* -- BTNS
+/**
+ * BTNS.CSS
+ * Buttons application style
+ *
+ * - BASE                       Base style of a button
+ * - SIZE                       Different size of buttons
+ * - COLOR                      Color of buttons
+ * - VARIANT                    Variant of buttons - Outline, Multiple lines
+ * - STATE                      State of buttons - Alert, Disabled
+ * - GROUP                      Group of buttons
+ */
+
+/* -- BASE
 ------------------------ */
 
 .btn {
@@ -11,7 +23,6 @@
     text-decoration: none;
     font-weight: normal;
 
-    cursor: pointer;
     display: inline-block;
     margin: 0 .25em 0 0;
     padding: .6rem 1.5rem;
@@ -21,11 +32,16 @@
 
     position: relative;
     vertical-align: middle;
+
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #999;
 }
+
+/* -- SIZE
+------------------------ */
 
 .btn_small {
     padding: .2rem 1.5rem;
@@ -38,6 +54,9 @@
 .btn_wide {
     display: block;
 }
+
+/* -- COLOR
+------------------------ */
 
 .btn_primary {
     color: #fff;
@@ -55,6 +74,9 @@
 .btn_secondary:hover {
     background-color: #f2d52f;
 }
+
+/* -- VARIANT
+------------------------ */
 
 .btn_outline {
     background-color: transparent;
@@ -93,6 +115,22 @@
     border-color: #f2d52f;
 }
 
+.btn_content {
+    text-align: left;
+
+    display: inline-block;
+    margin-left: .2rem;
+
+    vertical-align: middle;
+}
+
+.btn_content span {
+    display: block;
+}
+
+/* -- STATE
+------------------------ */
+
 .btn_alert {
     background-color: #d14836;
     color: #fff;
@@ -113,30 +151,12 @@
     opacity: .4;
 }
 
-/*.btn_icon__icon:first-child {*/
-    /*margin-left: -.5rem;*/
-/*}*/
+/*  -- GROUP OF BUTTONS
+------------------------ */
 
-/*.btn_icon__icon:last-child:not(:first-child) {*/
-    /*margin-right: -.5rem;*/
-/*}*/
-
-.btn_content {
-    text-align: left;
-
-    display: inline-block;
-    margin-left: .2rem;
-
-    vertical-align: middle;
-}
-
-.btn_content span {
-    display: block;
-}
-
-/* Group de Buttons */
 .btns_group {
     display: inline-block;
+
     position: relative;
 }
 

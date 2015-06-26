@@ -1,22 +1,33 @@
-/* -- GOODIES
------------------------- */
+/**
+ * GOODIES.CSS
+ * Goodies application style
+ *
+ * - MENU HAMBURGER                    Base style of table
+ * - SEARCH EXPAND                     Search input that expand on focus
+ * - BREADCRUMB                        Basic style for a breadcumb
+ * - PAGINATION                        Basic style for pagination
+ */
 
-/* Menu hamburger */
+/* -- MENU HAMBURGER
+------------------------ */
 
 .toggle_nav_icon {
     display: inline-block;
     height: 1.3rem;
     width: 2.5rem;
+
     cursor: pointer;
 }
 
 .toggle_nav_icon span,
 .toggle_nav_icon span:before,
 .toggle_nav_icon span:after {
+    background-color: #222;
+
     display: block;
     width: 2.5rem;
     height: .3rem;
-    background-color: #222;
+
     -webkit-transition-property: background-color, -webkit-transform;
     transition-property: background-color, transform;
     -webkit-transition-duration: 0.3s;
@@ -25,16 +36,19 @@
 
 .toggle_nav_icon span {
     cursor: pointer;
+
     display: inline-block;
-    position: relative;
     margin-top: .5rem;
     margin-bottom: .5rem;
+
+    position: relative;
 }
 
 .toggle_nav_icon span:before,
 .toggle_nav_icon span:after {
-    position: absolute;
     content: "";
+
+    position: absolute;
 }
 
 .toggle_nav_icon span:before {
@@ -45,7 +59,7 @@
     bottom: -.5rem;
 }
 
-/* changer pour active */
+/*TODO change hover for active in GWT */
 .toggle_nav_icon:hover span {
     background-color: transparent;
 }
@@ -62,8 +76,10 @@
     transform: translateY(-5px) rotate(-45deg);
 }
 
-/* Search expand */
-input.searchExpand[type=text] {
+/* -- SEARCH EXPAND
+------------------------ */
+
+input.search_expand[type=text] {
     width: 6rem;
     padding-right: 2rem;
 
@@ -72,6 +88,76 @@ input.searchExpand[type=text] {
     transition: all 0.2s ease-in-out;
 }
 
-input.searchExpand[type=text]:focus {
+input.search_expand[type=text]:focus {
     width: 14rem;
+}
+
+/* -- BREADCRUMB
+------------------------ */
+
+ul.breadcrumb {
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    margin-right: 4px;
+}
+
+ul.breadcrumb li::before {
+    content: "> ";
+    color: #c3c3c3;
+}
+
+ul.breadcrumb li:first-child::before {
+    content: "";
+}
+
+ul.breadcrumb a {
+    color: #c3c3c3;
+    text-decoration: none;
+}
+
+ul.breadcrumb a:hover {
+    color: #3f3f3f;
+}
+
+ul.breadcrumb li:last-child a {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* -- PAGINATION
+------------------------ */
+
+ul.pagination {
+    text-align: center;
+
+    list-style: none;
+}
+
+ul.pagination li {
+    display: inline;
+    margin: 0 2px;
+}
+
+ul.pagination a {
+    color: #c3c3c3;
+    text-decoration: none;
+}
+
+ul.pagination a:hover {
+    color: #3f3f3f;
+}
+
+ul.pagination li.pagination_first,
+ul.pagination li.pagination_last,
+ul.pagination li.pagination_previous,
+ul.pagination li.pagination_next {
+    text-decoration: none;
+}
+
+ul.pagination .pagination_active {
+    color: #333333;
+    text-decoration: none;
 }
