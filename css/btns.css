@@ -119,6 +119,7 @@
     text-align: left;
 
     display: inline-block;
+    /* TODO: Pourquoi le bouton avec contenu a du margin à gauche? */
     margin-left: .2rem;
 
     vertical-align: middle;
@@ -144,6 +145,7 @@
 .btn_disabled,
 .btn_disabled:hover,
 .btn_disabled:focus {
+    /* TODO: Commentaire non nécessaire? */
     background-color: #eee; /* meme couleur que default */
 
     cursor: default;
@@ -154,18 +156,25 @@
 /*  -- GROUP OF BUTTONS
 ------------------------ */
 
+/* TODO: Je renommerais "btns_group" par simplement "btns" */
 .btns_group {
     display: inline-block;
 
     position: relative;
 }
 
+/* TODO: Child selector (>) entre .btns et .btn */
 .btns_group .btn {
     margin: 0;
 
     float: left;
 }
 
+/* TODO: Selon ta nommenclature, _ est un modifier et __ est un block
+/* et pas besoin de surclasser avec .btns, donc remplacer 
+/* .btns_group.btns_group__round .btn:first-child
+/* par
+/* .btns_round > .btn:first-child (et last-child plus bas) */
 .btns_group.btns_group__round .btn:first-child {
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;

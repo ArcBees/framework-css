@@ -38,6 +38,7 @@ table td {
 
 table td:first-child,
 table th:first-child,
+/* TODO: Pas besoin de surqualifier avec "table." */
 table.table_bordered td:first-child,
 table.table_bordered th:first-child,
 table.table_column td:first-child,
@@ -48,8 +49,10 @@ table.table_column th:first-child{
 /* -- VARIANT
 ------------------------ */
 
+/* TODO: sqeezed -> squeezed */
 /* -- Sqeezed -- */
 
+/* TODO: remove "table." */
 table.table_sqeezed {
     width: auto;
 }
@@ -96,6 +99,12 @@ table.table_hover tr:hover {
 
 /* -- Table row variable -- */
 
+/* TODO: Dans ce cas là j'utiliserais la surqualification avec
+/* une classe de state ".is_STATE" pour préciser le style. Tu
+/* pourrais donc facilement faire :
+/* tr.is_error > td, td.is_error
+/* et ainsi pouvoir appliquer le state d'erreur à un tr ou un td
+/* idem pour le disabled : is_disabled */
 tr.table_row__error td {
     background-color: #ffcccc;
 }

@@ -13,7 +13,7 @@
 
 body,
 input,
-button  {-webkit-font-smoothing: antialiased; }
+button  { -webkit-font-smoothing: antialiased; }
 
 body {
     line-height: 1.8rem;
@@ -119,6 +119,7 @@ h4:first-child {
     margin-top: 0;
 }
 
+/* TODO: J'enlèverais le "p" et je jouerais avec un % genre 125% */
 p.lead {
     font-size: 16px;
 }
@@ -160,6 +161,9 @@ dl.vertical_list dd {
 /* -- ALIGN CLASSES
 ------------------------ */
 
+/* TODO: Je n'utiliserais pas "text" puisque ça peut facilement être
+/* utilisé sur un <div> ou autre. J'utiliserais un state comme :
+/* .is_left / .is_centered / .is_right */
 .text_left {
     text-align: left;
 }

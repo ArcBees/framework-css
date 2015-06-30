@@ -19,6 +19,10 @@
     cursor: pointer;
 }
 
+/* TODO: Ça devrait être un <a> je crois, puisque ça mène
+/* au menu (avec du JS pour empècher de suivre le lien)
+/* car sinon je crois que ça ne sera pas accessible avec
+/* la navigation au clavier (question accessibilité) */
 .toggle_nav_icon span,
 .toggle_nav_icon span:before,
 .toggle_nav_icon span:after {
@@ -130,6 +134,7 @@ ul.breadcrumb li:last-child a {
 /* -- PAGINATION
 ------------------------ */
 
+/* TODO: Enlever la surqualification */
 ul.pagination {
     text-align: center;
 
@@ -141,6 +146,10 @@ ul.pagination li {
     margin: 0 2px;
 }
 
+/* TODO: Je remplacerais :
+/* ul.pagination a
+/* par
+/* .pagination__link */
 ul.pagination a {
     color: #c3c3c3;
     text-decoration: none;
@@ -150,6 +159,10 @@ ul.pagination a:hover {
     color: #3f3f3f;
 }
 
+/* TODO: Tout ça ne change rien dans le style, remove? 
+/* Aussi je ne mettrais pas les classes (si t'en as de
+/* besoin) sur les <li> mais sur les <a> avec un modifier
+/* du genre .pagination__link_first */
 ul.pagination li.pagination_first,
 ul.pagination li.pagination_last,
 ul.pagination li.pagination_previous,
@@ -157,6 +170,10 @@ ul.pagination li.pagination_next {
     text-decoration: none;
 }
 
+/* TODO: deviendrait : 
+/* .pagination__link.is_active
+/* ou
+/* .pagination__link_active */
 ul.pagination .pagination_active {
     color: #333333;
     text-decoration: none;

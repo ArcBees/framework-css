@@ -1,6 +1,9 @@
 /* -- COLORS
 ------------------------ */
 
+/* TODO: Selon moi, .color ne devrait pas faire partie du framework,
+/* puisque ce n'est qu'une classe pour te créer un box pour afficher
+/* dans ton index.html ... À bouger dans framework.css? */
 .color {
     display: inline-block;
     width: 75px;
