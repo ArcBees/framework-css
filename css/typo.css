@@ -1,5 +1,16 @@
-/* -- TYPO
+/**
+ * TYPO.CSS
+ * Typo application style
+ *
+ * - BASE                       Base style for typo
+ * - HEADINGS                   Style for h1, h2, h3, h4, h5, h6
+ * - LIST                       Style for list - Description list
+ * - ALIGN CLASSES              Style for the text-align property
+ */
+
+/* -- BASE
 ------------------------ */
+
 body,
 input,
 button  {-webkit-font-smoothing: antialiased; }
@@ -8,108 +19,146 @@ body {
     line-height: 1.8rem;
 }
 
-section.typo {
-    background-image: url(../images/baseline+column.png);
-    padding: 17px 0 0 0;
-}
-
-h1, h2, h3, h4, h5, h6				{
-    position: relative;
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
+
+    position: relative;
 }
-
-/*h1,*/
-/*h2,*/
-/*h3,*/
-/*h4 {*/
-    /*margin-top: 1.8rem;*/
-/*}*/
-
-/*h3,*/
-/*h4,*/
-/*h5,*/
-/*h6 {*/
-    /*line-height: 1.8rem;*/
-/*}*/
-
-
-/*h1,*/
-/*h2 {*/
-    /*line-height: 3.6rem;*/
-/*}*/
-
-/*h1 {*/
-    /*font-size: 3.6rem;*/
-    /*margin-bottom: 1.8rem;*/
-/*}*/
-
-/*h2 {*/
-    /*font-size: 2.8rem;*/
-    /*line-height: 3.6rem;*/
-    /*margin-bottom: 1.5rem;*/
-    /*padding-top: 3px;*/
-/*}*/
-
-/*h3 {*/
-    /*font-size: 2.2rem;*/
-    /*margin-top: -3px;*/
-    /*margin-bottom: 2.1rem;*/
-/*}*/
-
-/*h4 {*/
-    /*font-size: 1.8rem;*/
-    /*margin-top: -3px;*/
-    /*margin-bottom: 3px;*/
-/*}*/
-
-/*h5 {*/
-    /*font-size: 1.5rem;*/
-    /*margin-top: -2px;*/
-    /*margin-bottom: 2px;*/
-/*}*/
-
-/*h6 {*/
-    /*font-size: 1.3rem;*/
-/*}*/
-
 
 p {
     font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.8rem;
-    margin-bottom: 18px;
-    margin-top: 18px;
+
+    margin: 18px 0;
+
+    position: relative;
     top: 5px;
+}
+
+/* -- HEADING
+------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 36px;
+    margin-bottom: 18px;
+
     position: relative;
 }
 
-h1, h2, h3, h4, h5, h6				{ position: relative; }
-h1, h2, h3, h4, h5, h6				{ line-height: 36px; margin-bottom: 18px; }
-h1, h2, h3, h4						{ margin-top: 18px; }
-h3, h4, h5, h6						{ line-height: 18px; }
-h1									{ font-size: 36px; top: 5px; }
-h2									{ font-size: 28px; top: 8px; }
-h3									{ font-size: 22px; top: 1px; }
-h4									{ font-size: 18px; top: 2px; }
-h5									{ font-size: 15px; top: 4px; }
-h6									{ font-size: 13px; top: 5px; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 36px;
+
+    margin-bottom: 18px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 18px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    line-height: 18px;
+}
+
+h1 {
+    font-size: 36px;
+
+    top: 5px;
+}
+
+h2 {
+    font-size: 28px;
+
+    top: 8px;
+}
+
+h3 {
+    font-size: 22px;
+
+    top: 1px;
+}
+
+h4 {
+    font-size: 18px;
+
+    top: 2px;
+}
+
+h5 {
+    font-size: 15px;
+
+    top: 4px;
+}
+
+h6 {
+    font-size: 13px;
+
+    top: 5px;
+}
+
 h1:first-child,
 h2:first-child,
 h3:first-child,
-h4:first-child						{ margin-top: 0; }
-
-/*p, pre, address						{ font-size: 13px; line-height: 18px; position: relative; top: 5px;*/
-    /*margin: 0;*/
-    /*margin-bottom: 18px;}*/
-
-h2.section-title {
-    border-bottom: 1px solid #cccccc;
-    margin-bottom: 3rem;
-    padding-bottom: 1rem;
+h4:first-child {
+    margin-top: 0;
 }
 
 p.lead {
     font-size: 16px;
 }
+
+/* -- LIST
+------------------------ */
+
+dt {
+    font-weight: bold;
+
+    width: 10rem;
+    overflow: hidden;
+
+    float: left;
+
+    clear: both;
+}
+
+dd {
+    margin: 0 0 1rem 10rem;
+    padding: 0 0 1rem .5rem;
+}
+
+dl.vertical_list dt {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+    float: none;
+}
+
+dl.vertical_list dd {
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* -- ALIGN CLASSES
+------------------------ */
 
 .text_left {
     text-align: left;
