@@ -1,13 +1,6 @@
 /* -- COLORS
 ------------------------ */
 
-.color {
-    display: inline-block;
-    width: 75px;
-    height: 75px;
-    margin-right: 10px;
-}
-
 .color_primary {
     background-color: #ccc;
 }

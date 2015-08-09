@@ -2,10 +2,10 @@
  * GOODIES.CSS
  * Goodies application style
  *
- * - MENU HAMBURGER                    Base style of table
+ * - MENU HAMBURGER                    Style for hamburger menu with cross effect
  * - SEARCH EXPAND                     Search input that expand on focus
- * - BREADCRUMB                        Basic style for a breadcumb
- * - PAGINATION                        Basic style for pagination
+ * - BREADCRUMB                        Style for a breadcumb
+ * - PAGINATION                        Style for pagination
  */
 
 /* -- MENU HAMBURGER
@@ -95,34 +95,34 @@ input.search_expand[type=text]:focus {
 /* -- BREADCRUMB
 ------------------------ */
 
-ul.breadcrumb {
+.breadcrumb {
     list-style: none;
 }
 
-ul.breadcrumb li {
+.breadcrumb li {
     display: inline;
     margin-right: 4px;
 }
 
-ul.breadcrumb li::before {
+.breadcrumb li::before {
     content: "> ";
     color: #c3c3c3;
 }
 
-ul.breadcrumb li:first-child::before {
+.breadcrumb li:first-child::before {
     content: "";
 }
 
-ul.breadcrumb a {
+.breadcrumb a {
     color: #c3c3c3;
     text-decoration: none;
 }
 
-ul.breadcrumb a:hover {
+.breadcrumb a:hover {
     color: #3f3f3f;
 }
 
-ul.breadcrumb li:last-child a {
+.breadcrumb li:last-child a {
     color: #333333;
     text-decoration: none;
 }
@@ -130,34 +130,27 @@ ul.breadcrumb li:last-child a {
 /* -- PAGINATION
 ------------------------ */
 
-ul.pagination {
+.pagination {
     text-align: center;
 
     list-style: none;
 }
 
-ul.pagination li {
+.pagination li {
     display: inline;
     margin: 0 2px;
 }
 
-ul.pagination a {
+.pagination a {
     color: #c3c3c3;
     text-decoration: none;
 }
 
-ul.pagination a:hover {
+.pagination a:hover {
     color: #3f3f3f;
 }
 
-ul.pagination li.pagination_first,
-ul.pagination li.pagination_last,
-ul.pagination li.pagination_previous,
-ul.pagination li.pagination_next {
-    text-decoration: none;
-}
-
-ul.pagination .pagination_active {
+.pagination .pagination_link__active {
     color: #333333;
     text-decoration: none;
 }

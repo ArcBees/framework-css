@@ -6,7 +6,7 @@
  * - VARIANT                    Different style - squeezed, Column, Bordered, Striped,
  * - STATE                      State of table - Hover, Error, Disabled
  * - RESPONSIVE                 Responsive table
- * - TABLE DIV                  Table made with DIVs
+ * - TABLE DIVs                 Table made with DIVs
  */
 
 /* -- BASE
@@ -38,10 +38,10 @@ table td {
 
 table td:first-child,
 table th:first-child,
-table.table_bordered td:first-child,
-table.table_bordered th:first-child,
-table.table_column td:first-child,
-table.table_column th:first-child{
+.table_bordered td:first-child,
+.table_bordered th:first-child,
+.table_column td:first-child,
+.table_column th:first-child{
     border-left: none;
 }
 
@@ -50,59 +50,61 @@ table.table_column th:first-child{
 
 /* -- Sqeezed -- */
 
-table.table_sqeezed {
+.table_sqeezed {
     width: auto;
 }
 
 /* -- Column -- */
 
-table.table_column {
+.table_column {
     border: 1px solid #d0d0d0;
 }
 
-table.table_column td,
-table.table_column th {
+.table_column td,
+.table_column th {
     border-left: 1px solid #d0d0d0;
     border-top: none;
 }
 
 /* -- Bordered -- */
 
-table.table_bordered {
+.table_bordered {
     border: 1px solid #d0d0d0;
 }
 
-table.table_bordered td,
-table.table_bordered th {
+.table_bordered td,
+.table_bordered th {
     border-left: 1px solid #d0d0d0;
 }
 
 /* -- Striped -- */
 
-table.table_striped tr:nth-child(odd) {
+.table_striped tr:nth-child(odd) {
     background-color:#fff;
 }
 
-table.table_striped tr:nth-child(even) {
+.table_striped tr:nth-child(even) {
     background-color:#eee;
 }
 
 /* -- STATE
 ------------------------ */
 
-table.table_hover tr:hover {
+.table_hover tr:hover {
     background-color: #999;
 }
 
 /* -- Table row variable -- */
 
-tr.table_row__error td {
-    background-color: #ffcccc;
-}
-
-tr.table_row__disabled td {
+tr.is_disabled > td,
+td.is_disabled {
     pointer-events: none;
     opacity: .35;
+}
+
+tr.is_error > td,
+td.is_error {
+    background-color: #ffcccc;
 }
 
 /* -- RESPONSIVE

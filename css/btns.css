@@ -24,7 +24,6 @@
     font-weight: normal;
 
     display: inline-block;
-    margin: 0 .25em 0 0;
     padding: .6rem 1.5rem;
     min-height: 1em;
     outline: 0;
@@ -124,6 +123,10 @@
     vertical-align: middle;
 }
 
+.btn.btn_content {
+    margin-left: 0;
+}
+
 .btn_content span {
     display: block;
 }
@@ -144,7 +147,7 @@
 .btn_disabled,
 .btn_disabled:hover,
 .btn_disabled:focus {
-    background-color: #eee; /* meme couleur que default */
+    background-color: #eee;
 
     cursor: default;
     pointer-events: none;
@@ -154,24 +157,24 @@
 /*  -- GROUP OF BUTTONS
 ------------------------ */
 
-.btns_group {
+.btns {
     display: inline-block;
 
     position: relative;
 }
 
-.btns_group .btn {
+.btns > .btn {
     margin: 0;
 
     float: left;
 }
 
-.btns_group.btns_group__round .btn:first-child {
+.btns.btns_round .btn:first-child {
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
 }
 
-.btns_group.btns_group__round .btn:last-child {
+.btns.btns_round .btn:last-child {
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
 }

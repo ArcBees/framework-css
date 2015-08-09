@@ -564,12 +564,12 @@
             <a name="Group of buttons"></a>
             <h3>Group of buttons</h3>
 
-            <p>You can group buttons by wrapping them inside a div with the class <code>.btns_group</code>.<br/>
+            <p>You can group buttons by wrapping them inside a div with the class <code>.btns</code>.<br/>
                 The buttons will then float and display nicely next to one another.</p>
 
             <div class="grid">
                 <div class="col col_6">
-<pre><code data-language="html"><div class="btns_group">
+<pre><code data-language="html"><div class="btns">
     <a href="#" class="btn">Button</a>
     <a href="#" class="btn">Button</a>
     <a href="#" class="btn">Button</a>
@@ -578,7 +578,7 @@
 </code></pre>
                 </div>
                 <div class="col col_6">
-                    <div class="btns_group">
+                    <div class="btns">
                         <a href="#" class="btn">Button</a>
                         <a href="#" class="btn">Button</a>
                         <a href="#" class="btn">Button</a>
@@ -589,11 +589,11 @@
 
             <h4>With round corners</h4>
 
-            <p>Same as above but with a <code>.btns_group__round</code> class next to the previous class.</p>
+            <p>Same as above but with a <code>.btns_round</code> class next to the previous class.</p>
 
             <div class="grid">
                 <div class="col col_6">
-<pre><code data-language="html"><div class="btns_group btns_group__round">
+<pre><code data-language="html"><div class="btns btns_round">
     <a href="#" class="btn">Button</a>
     <a href="#" class="btn">Button</a>
     <a href="#" class="btn">Button</a>
@@ -602,7 +602,7 @@
 </code></pre>
                 </div>
                 <div class="col col_6">
-                    <div class="btns_group btns_group__round">
+                    <div class="btns btns_round">
                         <a href="#" class="btn">Button</a>
                         <a href="#" class="btn">Button</a>
                         <a href="#" class="btn">Button</a>
@@ -1551,12 +1551,12 @@
                                 <td>table 1</td>
                                 <td>table 2</td>
                                 <td>table 3</td>
-                                <td>table 4</td>
+                                <td class="is_disabled">table 4</td>
                                 <td>table 5</td>
                                 <td>table 6</td>
                                 <td>table 7</td>
                             </tr>
-                            <tr class="table_row__disabled">
+                            <tr class="is_disabled">
                                 <td>table 1</td>
                                 <td>table 2</td>
                                 <td>table 3</td>
@@ -1891,9 +1891,11 @@
 </code></pre>
                     </div>
                     <div class="col col_6">
-                <div class="toggle_nav_icon">
-                    <span></span>
-                </div></div></div>
+                        <a class="toggle_nav_icon">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
 
                 <a name="Expandable search"></a>
                 <h3>Expandable search</h3>
@@ -1921,29 +1923,29 @@
                 <div class="grid">
                     <div class="col col_6">
 <pre><code data-language="html"><ul class="pagination">
-    <li class="pagination_first"><a href="#">&laquo;</a></li>
-    <li class="pagination_prev"><a href="#">previous</a></li>
-    <li><a href="#" class="pagination_active">1</a></li>
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">previous</a></li>
+    <li><a href="#" class="pagination_link__active">1</a></li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
     <li><a href="#">5</a></li>
-    <li class="pagination_next"><a href="#">next</a></li>
-    <li class="pagination_last"><a href="#">&raquo;</a></li>
+    <li><a href="#">next</a></li>
+    <li><a href="#">&raquo;</a></li>
 </ul>
 </code></pre>
                     </div>
                     <div class="col col_6">
                         <ul class="pagination">
-                            <li class="pagination_first"><a href="#">&laquo;</a></li>
-                            <li class="pagination_prev"><a href="#">previous</a></li>
-                            <li><a href="#" class="pagination_active">1</a></li>
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">previous</a></li>
+                            <li><a href="#" class="pagination_link__active">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">4</a></li>
                             <li><a href="#">5</a></li>
-                            <li class="pagination_next"><a href="#">next</a></li>
-                            <li class="pagination_last"><a href="#">&raquo;</a></li>
+                            <li><a href="#">next</a></li>
+                            <li><a href="#">&raquo;</a></li>
                         </ul>
                     </div>
                 </div>
