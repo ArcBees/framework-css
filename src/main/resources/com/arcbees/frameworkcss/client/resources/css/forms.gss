@@ -1,0 +1,333 @@
+@require "theme";
+
+/**
+ * FORMS.CSS
+ * Forms application style
+ *
+ * - BASE                       Base style label, input, textarea, select
+ * - INPUT STATE                State of the input - Error, Required
+ * - INPUT WITH ICON            Input with icon - Error, Required
+ * - INPUT LABELED              Input labeled - "with button"
+ * - FORM                       Form style for fields
+ * - FORM INLINE FIELDS         Form with inline fields
+ * - FORM INLINE EVEN FIELDS    Form with inline fields that takes full width of it's parent
+ * - RADIO - CHECKBOX           Style for custom radio button and checkbox
+ */
+
+/* -- BASE
+------------------------ */
+
+label,
+input {
+    display: inline-block;
+}
+
+textarea,
+input,
+select {
+    color: C_TEXT;
+
+    padding: 5px;
+    border: 1px solid #cccccc;
+
+    vertical-align: middle;
+
+    border-radius: 0;
+    outline: none;
+}
+
+select {
+    color: C_TEXT_MEDIUM;
+    background-color: C_BACKGROUND_LIGHT;
+
+    height: 24px;
+}
+
+::-webkit-input-placeholder {color: C_TEXT_MEDIUM;}
+::-moz-placeholder {color: C_TEXT_MEDIUM;}
+:-ms-input-placeholder {color: C_TEXT_MEDIUM;}
+
+/* -- INPUT STATE
+------------------------ */
+
+.input__error {
+    background-color: C_NEGATIVE;
+
+    border-color: #cc6666;
+}
+
+.input__error::-webkit-input-placeholder {color: C_TEXT_ERROR;}
+.input__error::-moz-placeholder {color: C_TEXT_ERROR;}
+.input__error:-ms-input-placeholder {color: C_TEXT_ERROR;}
+
+.inputRequired {
+    display: inline-block;
+
+    position: relative;
+}
+
+.inputRequired_required:after {
+    content: "*";
+    color: C_TEXT_ERROR;
+    font-size: 16px;
+
+    position: absolute;
+    top: -1px;
+    right: 2px;
+}
+
+/* -- INPUT WITH ICON
+------------------------ */
+
+.inputIcon {
+    display: inline-block;
+    max-width: 100%;
+
+    position: relative;
+}
+
+.inputIcon_icon {
+    font-size: 1.5rem;
+
+    margin-top: -7px;
+
+    position: absolute;
+    top: 50%;
+    left: 5px;
+}
+
+.inputIcon input:first-child:not(:last-child) {
+    text-indent: 0;
+}
+
+.inputIcon .inputIcon_icon:not(:first-child) {
+    right: 5px;
+    left: auto;
+}
+
+.inputIcon input {
+    text-indent: 15px;
+
+    padding: 5px;
+}
+
+/* -- INPUT LABELED
+------------------------ */
+
+.inputLabeled {
+    display: table;
+
+    position: relative;
+}
+
+.inputLabeled > * {
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+.inputLabeled_label {
+    background: C_BACKGROUND;
+    color: C_TEXT;
+    text-decoration: none;
+    text-align: center;
+
+    height: 100%;
+    padding: 0 5px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.inputLabeled_label + input {
+    text-indent: 0;
+}
+
+.inputLabeled_label + input {
+    text-indent: 0;
+}
+
+.inputLabeled_label:hover {
+    background: C_BACKGROUND_DARK;
+}
+
+i.inputLabeled_label {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+/* -- FORM
+------------------------ */
+
+.field {
+    margin: 10px 0;
+}
+
+.field label,
+.field input {
+    display: block;
+}
+
+label.required:after {
+    content: "*";
+    color: C_TEXT_ERROR;
+    font-size: 16px;
+    line-height: 1;
+
+    display: inline-block;
+    margin-top: -1rem;
+}
+
+/* -- FORM INLINE FIELDS
+------------------------ */
+
+.inlineFields .field > * {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+/* change the width of the labels */
+.inlineFields .field label {
+    width: 75px;
+}
+
+.inlineFields .field label.name {
+    width: 50px;
+}
+
+.inlineFields input,
+.inlineFields select,
+.inlineFields textarea {
+    max-width: 100%;
+}
+
+/* -- FORM INLINE EVEN FIELDS
+------------------------ */
+
+.inlineFields__even .field {
+    display: table;
+    width: 100%;
+}
+
+.inlineFields__even .field > * {
+    display: table-cell;
+    padding: 0 5px;
+
+    vertical-align: middle;
+}
+
+.inlineFields__even .field > *:first-child {
+    padding-left: 0;
+}
+
+.inlineFields__even .field > *:last-child {
+    padding-right: 0;
+}
+
+/* here you fix the width of the labels */
+.inlineFields__even .field label {
+    width: 80px;
+}
+
+.inlineFields__even input,
+.inlineFields__even .input,
+.inlineFields__even select,
+.inlineFields__even textarea {
+    width: 100%;
+}
+
+/* -- RADIO - CHECKBOX
+------------------------ */
+
+input[type=radio],
+input[type=checkbox] {
+    display: none;
+}
+
+.inputRadio,
+.inputCheckbox {
+    display: inline-block;
+}
+
+.inputRadio label,
+.inputCheckbox label {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    display: inline-block;
+    padding-left: 25px;
+    margin: 0 15px 10px 0;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.inputRadio label:before,
+.inputCheckbox label:before {
+    content: "";
+    background-color: C_BACKGROUND_LIGHT;
+    font-size: 0;
+
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    border: 1px solid #cccccc;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border-radius: 8px;
+}
+
+.inputRadio label:before {
+    color: C_TEXT;
+    content: "\2022";
+    font-size: 0;
+    line-height: 16px;
+    text-align: center;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type=radio]:checked + label:before {
+    font-size: 32px;
+
+    border-color: #3f3f3f;
+}
+
+.inputCheckbox label:before {
+    border-radius: 0;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "";
+    background-color: transparent;
+    font-size: 15px;
+    color: C_TEXT;
+    text-align: center;
+    line-height: 15px;
+
+    width: 10px;
+    height: 8px;
+
+    border-left: 2px solid #3f3f3f;
+    border-bottom: 4px solid #3f3f3f;
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0, 0);
+
+    -webkit-transform: rotate(-45deg) scaleY(0.5);
+    -moz-transform: rotate(-45deg) scaleY(0.5);
+    -ms-transform: rotate(-45deg) scaleY(0.5);
+    -o-transform: rotate(-45deg) scaleY(0.5);
+    transform: rotate(-45deg) scaleY(0.5);
+}

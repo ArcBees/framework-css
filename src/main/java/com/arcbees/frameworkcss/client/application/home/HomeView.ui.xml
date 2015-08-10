@@ -1,0 +1,920 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:with field="res" type="com.arcbees.frameworkcss.client.resources.AppResources"/>
+    <ui:with field="btns" type="com.arcbees.frameworkcss.client.resources.BtnsResources"/>
+    <ui:with field="forms" type="com.arcbees.frameworkcss.client.resources.FormsResources"/>
+    <ui:with field="tables" type="com.arcbees.frameworkcss.client.resources.TablesResources"/>
+
+    <g:HTMLPanel>
+        <div class="{res.style.wrapper}">
+            <section>
+                <a name="Buttons"></a>
+                <h2 class="section-title">Buttons</h2>
+
+                <a name="Default buttons"></a>
+                <h3>Default button</h3>
+
+                <a href="#" class="{btns.style.btn}">Button</a>
+
+                <a name="Colored button"></a>
+                <h3>Colored button</h3>
+
+                <p>Classes can be added to define the color of the buttons</p>
+
+                <a href="#" class="{btns.style.btn} {btns.style.btn__primary}">Button</a>
+                <a href="#" class="{btns.style.btn} {btns.style.btn__secondary}">Button</a>
+                <a href="#" class="{btns.style.btn} {btns.style.btn__alert}">Button</a>
+
+                <a name="Disabled button"></a>
+                <h3>Disabled button</h3>
+
+                <a href="#" class="{btns.style.btn} {btns.style.btn__disabled}">Button</a>
+
+                <a name="Outline button"></a>
+                <h3>Outline button</h3>
+
+                <a href="#" class="{btns.style.btn} {btns.style.btn__outline}">Button</a>
+                <a href="#" class="{btns.style.btn} {btns.style.btn__outline} {btns.style.btn__primary}">
+                    Button
+                </a>
+                <a href="#" class="{btns.style.btn} {btns.style.btn__outline} {btns.style.btn__secondary}">
+                    Button
+                </a>
+
+                <a name="Button with icons"></a>
+                <h3>Button with icons</h3>
+
+                <a href="#" class="{btns.style.btn}">
+                    <i class="fa fa-cog"></i>
+                    Button
+                </a>
+                <button type="button" class="{btns.style.btn}">
+                    Button
+                    <i class="fa fa-cog"></i>
+                </button>
+
+                <a name="Differents sizes buttons"></a>
+                <h3>Differents sizes</h3>
+
+                <h4>Small button</h4>
+
+                <a href="#" class="{btns.style.btn} {btns.style.btn__small}">Button</a>
+
+                <h4>Large button</h4>
+
+                <a href="#" class="{btns.style.btn} {btns.style.btn__large}">Button</a>
+
+                <!-- BUTTONS FULL WIDTH-->
+
+                <h4>Full width button</h4>
+
+                <a href="#" class="{btns.style.btn} {btns.style.btn__wide}">Button</a>
+
+                <a name="Multiples lines buttons"></a>
+                <h3>Button with text on more than 1 line</h3>
+
+                <div class="{btns.style.btn} {btns.style.btn_content}">
+                    two line
+                    <span>text button</span>
+                </div>
+
+                <h3>With icon</h3>
+
+                <div class="{btns.style.btn}">
+                    <i class="fa fa-cog"></i>
+                    <div class=" {btns.style.btn_content}">
+                        two line
+                        <span>text button</span>
+                    </div>
+                </div>
+
+                <a name="Group of buttons"></a>
+                <h3>Group of buttons</h3>
+
+                <div class="{btns.style.btns}">
+                    <a href="#" class="{btns.style.btn}">Button</a>
+                    <a href="#" class="{btns.style.btn}">Button</a>
+                    <a href="#" class="{btns.style.btn}">Button</a>
+                    <button type="button" class="{btns.style.btn}">Button</button>
+                </div>
+
+                <h4>With round corners</h4>
+
+                <div class="{btns.style.btns} {btns.style.btns__round}">
+                    <a href="#" class="{btns.style.btn}">Button</a>
+                    <a href="#" class="{btns.style.btn}">Button</a>
+                    <a href="#" class="{btns.style.btn}">Button</a>
+                    <button type="button" class="{btns.style.btn}">Button</button>
+                </div>
+            </section>
+
+            <section>
+                <a name="Inputs"></a>
+                <h2 class="section-title">Inputs</h2>
+
+                <a name="Inputs standard"></a>
+                <h3>Standard</h3>
+
+                <input type="text" placeholder="Name"/>
+
+                <input type="text" placeholder="Last Name"/>
+                <select name="name" id="name">
+                    <option value="option 1">option 1</option>
+                    <option value="option 2">option 2</option>
+                    <option value="option 3">option 3</option>
+                </select>
+
+                <div class="{forms.style.inputRadio}">
+                    <input type="radio" id="radio1" name="gender"/>
+                    <label for="radio1">Male</label>
+                    <input type="radio" id="radio2" name="gender"/>
+                    <label for="radio2">Female</label>
+                </div>
+                <div class="{forms.style.inputCheckbox}">
+                    <input type="checkbox" id="check1"/>
+                    <label for="check1">Sexy</label>
+                </div>
+                <button class="{btns.style.btn}">Button</button>
+
+                <a name="Inputs with icon"></a>
+                <h3>With icon</h3>
+
+                <div class="{forms.style.input} {forms.style.inputIcon}">
+                    <i class="{forms.style.inputIcon_icon} fa fa-cog"></i>
+                    <input type="text" placeholder="Name"/>
+                </div>
+
+                <div class="{forms.style.input} {forms.style.inputIcon}">
+                    <input type="text" placeholder="Name"/>
+                    <i class="{forms.style.inputIcon_icon} fa fa-cog"></i>
+                </div>
+
+                <a name="Inputs labeled"></a>
+                <h3>labeled</h3>
+
+                <div class="{forms.style.input} {forms.style.inputLabeled}">
+                    <span class="{forms.style.inputLabeled_label}">Go</span>
+                    <input type="text" placeholder="Name"/>
+                </div>
+
+                <div class="{forms.style.input} {forms.style.inputLabeled}">
+                    <input type="text" placeholder="Name"/>
+                    <span class="{forms.style.inputLabeled_label}">
+                        <button>Go</button>
+                    </span>
+                </div>
+
+                <div class="{forms.style.input} {forms.style.inputIcon} {forms.style.inputLabeled}">
+                    <i class="{forms.style.inputIcon_icon} fa fa-cog"></i>
+                    <input type="text" placeholder="Name"/>
+                    <a href="#" class="{forms.style.inputLabeled_label}">Go</a>
+                </div>
+
+                <div class="{forms.style.input} {forms.style.inputLabeled}">
+                    <input type="text" placeholder="Search"/>
+                    <span class="{forms.style.inputLabeled_label}">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </div>
+
+                <div class="{forms.style.input} {forms.style.inputIcon} {forms.style.inputLabeled}">
+                    <span class="{forms.style.inputLabeled_label}">
+                        <button href="#">Go</button>
+                    </span>
+                    <input type="text" placeholder="Name"/>
+                    <i class="{forms.style.inputIcon_icon} fa fa-cog"></i>
+                </div>
+
+                <a name="Input error"></a>
+                <h3>error</h3>
+
+                <input type="text" class="{forms.style.input__error}" placeholder="Name"/>
+
+                <a name="Input required"></a>
+                <h3>required</h3>
+
+                <div>
+                    <div class="{forms.style.input} {forms.style.inputRequired}">
+                        <input type="text" placeholder="Name"/>
+                        <i class="{forms.style.inputRequired_required}"/>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="{forms.style.input} {forms.style.inputIcon} {forms.style.inputRequired}">
+                        <i class="{forms.style.inputIcon_icon} fa fa-cog"/>
+                        <input type="text" placeholder="Name"/>
+                        <i class="{forms.style.inputRequired_required}"/>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="{forms.style.input} {forms.style.inputIcon} {forms.style.inputRequired}">
+                        <input type="text" placeholder="Name"/>
+                        <i class="{forms.style.inputIcon_icon} fa fa-cog"/>
+                        <i class="{forms.style.inputRequired_required}"/>
+                    </div>
+                </div>
+
+
+                <div>
+                    <label for="" class="{forms.style.required}">Name</label>
+                    <input type="text"/>
+                </div>
+
+                <a name="Radio input"></a>
+                <h3>Radio</h3>
+
+
+                <div class="{forms.style.inputRadio}">
+                    <input type="radio" id="radio3" name="gender"/>
+                    <label for="radio3">Male</label>
+                    <input type="radio" id="radio4" name="gender"/>
+                    <label for="radio4">Female</label>
+                </div>
+
+                <a name="Checkbox input"></a>
+                <h3>Checkbox</h3>
+
+                <div class="{forms.style.inputCheckbox}">
+                    <input type="checkbox" id="check3"/>
+                    <label for="check3">Male</label>
+                    <input type="checkbox" id="check4"/>
+                    <label for="check4">Female</label>
+                </div>
+            </section>
+            <section>
+                <a name="Form"></a>
+                <h2 class="section-title">Form</h2>
+
+                <a name="Form default"></a>
+                <h3>Default form</h3>
+
+                <form action="">
+                    <fieldset>
+                        <div class="{forms.style.field}">
+                            <label for="" class="{forms.style.required}">name</label>
+                            <input type="text"/>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">last name</label>
+                            <input type="text"/>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">adress</label>
+                            <input type="text"/>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">city</label>
+
+                            <div class="{forms.style.input} {forms.style.inputIcon}">
+                                <i class="{forms.style.inputIcon_icon} fa fa-cog"/>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">Zip code</label>
+
+                            <div class="{forms.style.input} {forms.style.inputIcon} {forms.style.inputLabeled}">
+                                <i class="{forms.style.inputIcon_icon} fa fa-cog"/>
+                                <input type="text"/>
+                                <span class="{forms.style.inputLabeled_label}">Go</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <a name="Form inline fields"></a>
+                <h3>Inline fields</h3>
+
+
+                <form action="" class="{forms.style.inlineFields}">
+                    <fieldset>
+                        <div class="{forms.style.field}">
+                            <label for="" class="{forms.style.required}">name</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">last name</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">address</label>
+
+                            <div>
+                                <div class="{forms.style.input} {forms.style.inputIcon}">
+                                    <i class="{forms.style.inputIcon_icon} fa fa-cog"></i>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">city</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                            <label for="">postal code</label>
+
+                            <div>
+                                <div class="{forms.style.input} {forms.style.inputLabeled}">
+                                    <input type="text"/>
+                                    <span class="{forms.style.inputLabeled_label}">Go</span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <a name="Form inline even fields"></a>
+                <h3>Inline even fields</h3>
+
+
+                <form action="" class="{forms.style.inlineFields__even}">
+                    <fieldset>
+                        <div class="{forms.style.field}">
+                            <label for="" class="{forms.style.required}">name</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">Label 2</label>
+
+                            <div>
+                                <div class="{forms.style.input} {forms.style.inputIcon}">
+                                    <i class="{forms.style.inputIcon_icon} fa fa-cog"></i>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="">Label 2</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="" class="name">name</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                            <label for="">last name</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="{forms.style.field}">
+                            <label for="" class="{forms.style.name}">name</label>
+
+                            <div>
+                                <input type="text"/>
+                            </div>
+                            <label for="">last name</label>
+
+                            <div>
+                                <div class="{forms.style.input} {forms.style.inputIcon} {forms.style.inputLabeled}">
+                                    <i class="{forms.style.inputIcon_icon} fa fa-cog"></i>
+                                    <input type="text"/>
+                                    <span class="{forms.style.inputLabeled_label}">Go</span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+                <a name="Tables"></a>
+                <h2 class="section-title">Tables</h2>
+
+                <a name="Tables default"></a>
+                <h3>Default</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables column"></a>
+                <h3>Column</h3>
+
+                <table class="{tables.style.table__column}">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables striped"></a>
+                <h3>Striped</h3>
+
+                <table class="{tables.style.table__striped}">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables bordered"></a>
+                <h3>Bordered</h3>
+
+                <table class="{tables.style.table__bordered}">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables sqeezed"></a>
+                <h3>Sqeezed</h3>
+
+                <table class="{tables.style.table__sqeezed}">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables error"></a>
+                <h3>Error</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr class="{tables.style.is_error}">
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables disabled"></a>
+                <h3>Disabled</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td class="{tables.style.is_disabled}">table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr class="{tables.style.is_disabled}">
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables hover"></a>
+                <h3>Hover</h3>
+
+                <table class="{tables.style.table__hover}">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a name="Tables responsive"></a>
+                <h3>Responsive</h3>
+
+                <table class="{tables.style.table__responsive}">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Patient</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                        <tr>
+                            <td>table 1</td>
+                            <td>table 2</td>
+                            <td>table 3</td>
+                            <td>table 4</td>
+                            <td>table 5</td>
+                            <td>table 6</td>
+                            <td>table 7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <a name="Tables display"></a>
+                <h2 class="section-title">Table Display</h2>
+                <small>using divs</small>
+
+                <a name="Tables display default"></a>
+                <h3>Default</h3>
+
+                <div class="{tables.style.tbl}">
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                </div>
+
+                <a name="Tables display colored"></a>
+                <h3>Colored</h3>
+
+                <div class="{tables.style.tbl} {tables.style.tbl__colored}">
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                </div>
+
+                <a name="Tables display separate"></a>
+                <h3>Separate</h3>
+
+                <div class="{tables.style.tbl} {tables.style.tbl__colored} {tables.style.tbl__separate}">
+                    <div>table content</div>
+                    <div>table content</div>
+                    <div>table content</div>
+                </div>
+
+                <a name="Tables display grouped"></a>
+                <h3>Grouped</h3>
+                <div class="{tables.style.tbls}">
+                    <div class="{tables.style.tbl} {tables.style.tbl__colored}">
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div class="{tables.style.tbl} {tables.style.tbl__colored}">
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                </div>
+                <div class="{tables.style.tbls}">
+                    <div class="{tables.style.tbl} {tables.style.tbl__colored} {tables.style.tbl__separate}">
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                    <div class="{tables.style.tbl} {tables.style.tbl__colored} {tables.style.tbl__separate}">
+                        <div>table content</div>
+                        <div>table content</div>
+                        <div>table content</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

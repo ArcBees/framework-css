@@ -1,0 +1,22 @@
+@require "theme";
+
+/**
+ * STYLE.CSS
+ * Base application style
+ *
+ * - INIT                       Base
+ * - STYLE                      Classes mostly used
+ */
+
+/* -- Init
+------------------------------------------- */
+
+body {
+    background-color: C_BACKGROUND_LIGHT;
+    color: C_TEXT;
+}
+
+.wrapper {
+    width: 750px;
+    margin: 0 auto;
+}

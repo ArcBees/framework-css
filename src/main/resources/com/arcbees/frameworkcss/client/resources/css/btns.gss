@@ -1,0 +1,182 @@
+@require "theme";
+
+/**
+ * BTNS.CSS
+ * Buttons application style
+ *
+ * - BASE                       Base style of a button
+ * - SIZE                       Different size of buttons
+ * - COLOR                      Color of buttons
+ * - VARIANT                    Variant of buttons - Outline, Multiple lines
+ * - STATE                      State of buttons - Alert, Disabled
+ * - GROUP                      Group of buttons
+ */
+
+/* -- BASE
+------------------------ */
+
+.btn {
+    background-color: C_BACKGROUND;
+    color: C_TEXT;
+    line-height: 1;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+
+    display: inline-block;
+    padding: .6rem 1.5rem;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+
+    position: relative;
+    vertical-align: middle;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: C_BACKGROUND_DARK;
+}
+
+/* -- SIZE
+------------------------ */
+
+.btn__small {
+    padding: .2rem 1.5rem;
+}
+
+.btn__large {
+    padding: 1rem 1.5rem;
+}
+
+.btn__wide {
+    display: block;
+}
+
+/* -- COLOR
+------------------------ */
+
+.btn__primary {
+    color: C_TEXT_LIGHT;
+    background-color: C_PRIMARY;
+}
+
+.btn__primary:hover {
+    background-color: #006699;
+}
+
+.btn__secondary {
+    background-color: C_SECONDARY;
+}
+
+.btn__secondary:hover {
+    background-color: #f2d52f;
+}
+
+/* -- VARIANT
+------------------------ */
+
+.btn__outline {
+    background-color: transparent;
+    color: C_TEXT;
+
+    border: 1px solid #999;
+}
+
+.btn__outline:hover {
+    background-color: transparent;
+
+    border-color: #333;
+}
+
+.btn__outline.btn__primary {
+    color: C_PRIMARY;
+
+    border-color: C_PRIMARY;
+}
+
+.btn__outline.btn__primary:hover {
+    color: #006699;
+
+    border-color: #006699;
+}
+
+.btn__outline.btn__secondary {
+    color: C_SECONDARY;
+
+    border-color: C_SECONDARY;
+}
+
+.btn__outline.btn__secondary:hover {
+    color: #f2d52f;
+
+    border-color: #f2d52f;
+}
+
+.btn_content {
+    text-align: left;
+
+    display: inline-block;
+    margin-left: .2rem;
+
+    vertical-align: middle;
+}
+
+.btn.btn_content {
+    margin-left: 0;
+}
+
+.btn_content span {
+    display: block;
+}
+
+/* -- STATE
+------------------------ */
+
+.btn__alert {
+    background-color: C_TEXT_ERROR;
+    color: C_TEXT_LIGHT;
+}
+
+.btn__alert:hover {
+    background-color: #cc0000;
+}
+
+.btn[disabled],
+.btn__disabled,
+.btn__disabled:hover,
+.btn__disabled:focus {
+    color: C_TEXT_DISABLED;
+    background-color: C_DISABLED;
+
+    cursor: default;
+    pointer-events: none;
+}
+
+/*  -- GROUP OF BUTTONS
+------------------------ */
+
+.btns {
+    display: inline-block;
+
+    position: relative;
+}
+
+.btns > .btn {
+    margin: 0;
+
+    float: left;
+}
+
+.btns.btns__round .btn:first-child {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.btns.btns__round .btn:last-child {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}

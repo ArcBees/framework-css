@@ -1,0 +1,212 @@
+@require "theme";
+
+/**
+ * BASE.CSS
+ * Base application style
+ *
+ * - INIT                       Base style
+ * - ELEMENTS                   Style - p, a, b, strong,
+ * - LISTS
+ * - IMG                        Responsive table
+ * - STYLE                      Classes mostly used
+ */
+
+/* -- Init
+------------------------------------------- */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: C_SECONDARY;
+    text-shadow: none;
+}
+
+::selection {
+    background: C_SECONDARY;
+    text-shadow: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* avoid top margins on first content element */
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+
+/* -- HEADING
+------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 36px;
+    margin-bottom: 18px;
+
+    position: relative;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 18px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    line-height: 18px;
+}
+
+h1 {
+    font-size: 36px;
+
+    top: 5px;
+}
+
+h2 {
+    font-size: 28px;
+
+    top: 8px;
+}
+
+h3 {
+    font-size: 22px;
+
+    top: 1px;
+}
+
+h4 {
+    font-size: 18px;
+
+    top: 2px;
+}
+
+h5 {
+    font-size: 15px;
+
+    top: 4px;
+}
+
+h6 {
+    font-size: 13px;
+
+    top: 5px;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+    margin-top: 0;
+}
+
+/* -- Elements
+------------------------------------------- */
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+p,
+li {
+    line-height: 1.4em;
+    font-size: 1.5rem;
+
+    margin-bottom: 0.8em;
+}
+
+b,
+strong {
+    font-family: arial, sans-serif; /* use the bold version of the font-family e.g.: font-family: 'geometria-bold' */
+    font-weight: normal;
+}
+
+/* -- List
+------------------- */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+li p,
+li ul,
+li ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* -- Img
+------------------- */
+
+img {
+    border: 0; /* remove border when inside an <a> */
+    height: auto;
+}
+
+svg:not(:root) {
+    overflow: hidden; /* correct oddly overflow in IE9 */
+}
+
+/* -- Styles
+------------------- */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer; /* 3 */
+}

@@ -1,0 +1,228 @@
+@require "theme";
+
+/**
+ * TABLES.CSS
+ * Tables application style
+ *
+ * - BASE                       Base style of a table
+ * - VARIANT                    Different style - squeezed, Column, Bordered, Striped,
+ * - STATE                      State of table - Hover, Error, Disabled
+ * - RESPONSIVE                 Responsive table
+ * - TABLE DIVs                 Table made with DIVs
+ */
+
+/* -- BASE
+------------------------ */
+table {
+    text-align: left;
+
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table th {
+    background: C_BACKGROUND;
+
+    padding: .5em 1em;
+
+    vertical-align: middle;
+
+    cursor: auto;
+}
+
+table td {
+    padding: .5em 1em;
+    border-top: 1px solid #d0d0d0;
+
+    vertical-align: middle;
+}
+
+table td:first-child,
+table th:first-child,
+.table__bordered td:first-child,
+.table__bordered th:first-child,
+.table__column td:first-child,
+.table__column th:first-child{
+    border-left: none;
+}
+
+/* -- VARIANT
+------------------------ */
+
+/* -- Sqeezed -- */
+
+.table__sqeezed {
+    width: auto;
+}
+
+/* -- Column -- */
+
+.table__column {
+    border: 1px solid #d0d0d0;
+}
+
+.table__column td,
+.table__column th {
+    border-left: 1px solid #d0d0d0;
+    border-top: none;
+}
+
+/* -- Bordered -- */
+
+.table__bordered {
+    border: 1px solid #d0d0d0;
+}
+
+.table__bordered td,
+.table__bordered th {
+    border-left: 1px solid #d0d0d0;
+}
+
+/* -- Striped -- */
+
+.table__striped tr:nth-child(odd) {
+    background-color: C_BACKGROUND_LIGHT;
+}
+
+.table__striped tr:nth-child(even) {
+    background-color: C_BACKGROUND;
+}
+
+/* -- STATE
+------------------------ */
+
+.table__hover tr:hover {
+    background-color: C_BACKGROUND_DARK;
+}
+
+/* -- Table row variable -- */
+
+tr.is_disabled > td,
+td.is_disabled {
+    pointer-events: none;
+    color: C_TEXT_DISABLED;
+}
+
+tr.is_error > td,
+td.is_error {
+    background-color: C_NEGATIVE;
+}
+
+/* -- RESPONSIVE
+------------------------ */
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not act like tables anymore */
+    .table__responsive,
+    .table__responsive thead,
+    .table__responsive tbody,
+    .table__responsive th,
+    .table__responsive td,
+    .table__responsive tr {
+        display: block;
+    }
+
+    .table__responsive thead tr {
+        display: none;
+    }
+
+    .table__responsive tr {
+        border: 1px solid #999;
+    }
+
+    .table__responsive td {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        padding: .5rem 0;
+    }
+
+    .table__responsive td > * {
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+
+    .table__responsive td:before {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        display: inline-block;
+        width: 20%;
+        padding: 0 20px;
+        overflow: hidden;
+
+
+        vertical-align: middle;
+    }
+
+    /* Label the data */
+    /*TODO voir avec Christopher pour gwtp*/
+    .table__responsive td:nth-of-type(1):before {
+        content: "Time";
+    }
+
+    .table__responsive td:nth-of-type(2):before {
+        content: "Patient";
+    }
+
+    .table__responsive td:nth-of-type(3):before {
+        content: "Location";
+    }
+
+    .table__responsive td:nth-of-type(4):before {
+        content: "lonnngg en salllleeeeee";
+    }
+
+    .table__responsive td:nth-of-type(5):before {
+        content: "Reason";
+    }
+
+    .table__responsive td:nth-of-type(6):before {
+        content: "Status";
+    }
+
+    .table__responsive td:nth-of-type(7):before {
+        content: "Room";
+    }
+}
+
+/* -- TABLE DISPLAY div
+------------------------ */
+
+.tbls {
+    margin: 10px 0;
+}
+
+.tbls .tbl {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.tbl {
+    display: table;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.tbl > * {
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+.tbl__colored > * {
+    background-color: C_BACKGROUND;
+
+    padding: 4px 7px;
+}
+
+.tbl__separate {
+    margin-left: -2px; /* -- correspond to the width of the border-spacing -- */
+    width: calc(100% + 4px); /* -- the 4px equal the border-spacing x2 to fill the space at the beginning and at the end of the table  -- */
+
+    border-spacing: 2px 0; /* -- correspond to the number of pixel between each table-cell -- */
+    border-collapse: separate;
+}

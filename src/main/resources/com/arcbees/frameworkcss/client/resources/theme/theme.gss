@@ -1,0 +1,37 @@
+/**
+ * -> WARNING, this is a generated file. Use GWT-Theo if you want to modify it.
+ */
+
+@provide 'theme';
+
+/**
+ * Colors
+ */
+
+@def C_PRIMARY eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_PRIMARY");
+@def C_SECONDARY eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_SECONDARY");
+@def C_BACKGROUND_LIGHT eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_BACKGROUND_LIGHT");
+@def C_BACKGROUND eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_BACKGROUND");
+@def C_BACKGROUND_DARK eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_BACKGROUND_DARK");
+@def C_TEXT eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_TEXT");
+@def C_TEXT_LIGHT eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_TEXT_LIGHT");
+@def C_TEXT_MEDIUM eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_TEXT_MEDIUM");
+@def C_TEXT_DISABLED eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_TEXT_DISABLED");
+@def C_TEXT_ERROR eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_TEXT_ERROR");
+@def C_ACTION eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_ACTION");
+@def C_DISABLED eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_DISABLED");
+@def C_POSITIVE eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_POSITIVE");
+@def C_NEGATIVE eval("com.arcbees.frameworkcss.client.resources.theme.Colors.C_NEGATIVE");
+
+/**
+ * Fonts
+ */
+
+@def F_PRIMARY eval("com.arcbees.frameworkcss.client.resources.theme.Fonts.F_PRIMARY");
+@def F_PRIMARY_BOLD eval("com.arcbees.frameworkcss.client.resources.theme.Fonts.F_PRIMARY_BOLD");
+
+/**
+ * Sizes
+ */
+
+@def S_LINEHEIGHT eval("com.arcbees.frameworkcss.client.resources.theme.Sizes.S_LINEHEIGHT");
